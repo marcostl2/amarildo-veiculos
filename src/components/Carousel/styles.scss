@@ -1,0 +1,314 @@
+// .slider-wrapper{
+//     width: 100%;
+//     height: 100vh;
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     padding-top: 5%;
+
+//     .arrow-left,
+//     .arrow-right {
+//         height: 100%;
+//         width: 10%;
+//         border-radius: 0 20px 20px 0;
+//         position: absolute;
+//         display: flex;
+//         transition: 0.5s;
+//         justify-content: center;
+//         align-items: center;
+//         cursor: pointer;
+
+//         img{
+//             height: 50px;
+//             width: 40px;
+//         }
+//     }
+
+//     .arrow-left {
+//         left: 0;
+//         z-index: 2000;
+//     }
+    
+//     .arrow-right {
+//         right: 0;
+//         z-index: 2001;
+//     }
+
+//     .slidershow {
+//         height: 100%;
+//         max-width: 80vw;
+//         overflow-x: scroll;
+//         display: flex;
+//         position: relative;
+//         flex-direction: row;
+//         scroll-behavior: smooth;
+
+//         .slide {
+//             min-width: 100%;
+//             max-width: 80vw;
+//             // height: 100%;
+//             transition: 0.6s;
+//             display: flex;
+//             margin-right: 20px;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: center;
+
+//             h1{
+//                 font-size: 1.5em;
+//                 // margin-top: 40%;
+//                 margin-bottom: 15px;
+//             }
+//             .car-info {
+//                 width:100%;
+//                 // margin-left: 20px;
+//                 color: #21262c;
+//                 display: flex;
+//                 flex-direction: column;
+//                 // justify-content:space-evenly;
+//                 // align-self: flex-start;
+//                 // flex-wrap: wrap;
+//                 margin-top:1%;
+
+//                 .info{
+//                     display: flex;
+//                     flex-wrap: wrap;
+//                     justify-content: center;
+                    
+//                     p{
+//                         font-size: 0.9em;
+//                         font-weight: 500;
+//                         margin: 8px 3%;
+//                         // margin: 8px 25% 8px 0;
+//                     }
+//                 }
+            
+//             }
+            
+//         }
+//     }
+// }
+
+// ::-webkit-scrollbar {
+//     display: none;
+// }
+
+// @media screen and(max-width:700px){
+//     .info{
+//         flex-direction: column;
+//         p{
+//             text-align: center;
+//         }
+//     }
+//     .slider-wrapper:nth-child(1){
+//         display: none;
+//     }
+//     .slide{
+//         height: 80%;
+//     }
+//     .slidershow{
+//         min-width: 100vw;
+//         height: auto;
+//         overflow: -moz-hidden-unscrollable;
+//         flex-wrap: wrap;
+//     }
+    
+// }
+// @media screen and(max-width:910px){
+//     .slide img{
+//         width: 500px;
+//         height: 300px;
+//     }
+// }
+// @media screen and(min-width:910px){
+//     .slide img{
+//         width: 700px;
+//         height: 400px;
+//     }
+// }
+// @media screen and(max-width:530px){
+//     .slide img{
+//         width: 400px;
+//         height: 200px;
+//     }
+// }
+// @media screen and(max-width:400px){
+//     .slide img{
+//         width: 300px;
+//         height: 150px;
+//     }
+// }
+
+.slider-wrapper{
+    display: flex;
+    width: 100vw;
+    flex-wrap: nowrap;
+
+    .slide {
+        // min-width: 100%;
+        width: 100%;
+        // height: 100vh;
+        // max-width: 80vw;
+        // height: 100%;
+        transition: 0.6s;
+        display: flex;
+        // margin-right: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        h1{
+            margin-bottom: 15px;
+        }
+        .car-info {
+            width:100%;
+            // margin-left: 20px;
+            color: #21262c;
+            display: flex;
+            flex-direction: column;
+            // justify-content:space-evenly;
+            // align-self: flex-start;
+            // flex-wrap: wrap;
+            margin-top:1%;
+    
+            .info{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                
+                p{
+                    font-size: 0.9em;
+                    font-weight: 500;
+                    margin: 8px 3%;
+                    // margin: 8px 25% 8px 0;
+                }
+            }
+        
+        }
+    }
+    
+    .arrow-left,
+    .arrow-right {
+        height: 100%;
+        width: 10%;
+        border-radius: 0 20px 20px 0;
+        position: absolute;
+        display: flex;
+        transition: 0.5s;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    
+        img{
+            height: 50px;
+            width: 40px;
+        }
+    }
+    
+    .arrow-left {
+        left: 0;
+        z-index: 2000;
+    }
+    
+    .arrow-right {
+        right: 0;
+        z-index: 2001;
+    }
+
+    .scale-up-center {
+        // -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+    @keyframes scale-up-center {
+        0% {
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+        }
+        100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and(max-width:700px){
+    .info{
+        flex-direction: column;
+        p{
+            text-align: center;
+        }
+    }
+    .slider-wrapper{
+        flex-wrap: wrap;
+    }
+    .slider-wrapper:nth-child(1){
+        display: none;
+    }
+    .slidershow{
+        min-width: 100vw;
+        height: auto;
+        overflow: -moz-hidden-unscrollable;
+        flex-wrap: wrap;
+    }
+    
+}
+@media screen and(max-width:910px){
+    .slide img{
+        width: 500px;
+        height: 300px;
+    }
+}
+@media screen and(min-width:910px){
+    .slide img{
+        width: 700px;
+        height: 400px;
+    }
+}
+@media screen and(min-width:701px){
+    .slide{
+        height: 100vh;
+    }
+}
+@media screen and(max-width:700px){
+    .slide{
+        margin-top: 8%;
+    }
+}
+@media screen and(max-width:500px){
+    .slide{
+        margin-top:14%;
+    }
+}
+@media screen and(max-width:530px){
+    .slide img{
+        width: 400px;
+        height: 200px;
+    }
+}
+@media screen and(max-width:400px){
+    .slide img{
+        width: 300px;
+        height: 150px;
+    }
+}
+@media screen and(max-width:300px){
+    .slide img{
+        width: 250px;
+        height: 120px;
+    }
+}
+@media screen and(min-width:331px){
+    .slide h1{
+        font-size: 1.5em;
+    }
+}
+@media screen and(max-width:330px){
+    .slide h1{
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,24 @@
+.map-container{
+    width:100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    // position: relative;
+
+    // h1{
+    //     top: 5%;
+    //     left:43%;
+    //     position: absolute;
+    //     color: #21262c;
+    // }
+    .leaflet-container {
+        width: 80%;
+        height: 350px;
+        overflow:hidden;
+        border-radius: 8px;
+        margin-bottom: 24px;
+    }
+}

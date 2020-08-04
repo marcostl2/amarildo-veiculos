@@ -1,0 +1,18 @@
+.gallery-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    // background: rgb(31, 29, 29);
+    background-color: #21262c;
+
+    h1{
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+    }
+}
