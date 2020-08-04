@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
 import car from '../../images/fiat-mobi.png'
-import { Menu, Home, Image, } from '@material-ui/icons'
+import { Menu } from '@material-ui/icons'
 
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Link from '@material-ui/core/Link';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
 
 import './styles.scss'
 

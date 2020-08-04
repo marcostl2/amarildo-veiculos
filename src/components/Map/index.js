@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 // import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import Skeleton from '@material-ui/lab/Skeleton';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { Map, TileLayer, Marker} from 'react-leaflet'
 
 import './styles.scss'
 
@@ -12,13 +12,6 @@ function MapContainer(props) {
     useEffect(() => {
         setTimeout(() => setLoaded(true), 3000)
     })
-
-    const style = {
-        width: '70%',
-        height: '60%',
-        left: '14%',
-        top: '22%'
-    }
 
     const position=[-22.95162,-43.21077]
 
